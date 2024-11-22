@@ -23,7 +23,8 @@ export class SettingsComponent implements OnInit{
     this.items = [
       {
         label: 'Back to menu',
-        icon: 'pi pi-chevron-circle-izgano',
+        icon: 'pi pi-chevron-circle-left',
+        routerLink: '/barra'
       },
       
       {

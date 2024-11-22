@@ -7,11 +7,12 @@ import { AvatarModule } from 'primeng/avatar';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ImportsModule } from '../barra/imports';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-reporting',
   standalone: true,
-  imports: [ ImportsModule, MenuModule, BadgeModule, RippleModule, AvatarModule, CommonModule, RouterModule ],
+  imports: [ ImportsModule, MenuModule, BadgeModule, RippleModule, AvatarModule, CommonModule, RouterModule, ButtonModule ],
   templateUrl: './reporting.component.html',
   styleUrl: './reporting.component.scss'
 })
@@ -22,7 +23,7 @@ export class ReportingComponent implements OnInit{
     this.items = [
       {
         label: 'Back to menu',
-        icon: 'pi pi-chevron-circle-izgano',
+        icon: 'pi pi-chevron-circle-left',
         routerLink: '/barra'
       },
       {
@@ -30,7 +31,7 @@ export class ReportingComponent implements OnInit{
       },
             {
               label: 'Reports',
-              items: [
+            },
                 {
                   label: 'Overview',
                 },
@@ -52,9 +53,7 @@ export class ReportingComponent implements OnInit{
                 {
                   label: 'Deployment frequency report',
                 },
-              ],
+              ];
             }
-            
-        ];
   }
-}
+
